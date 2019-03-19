@@ -1,10 +1,10 @@
 version: '3.2'
 services:
   web:
-    image: php:7-apache
-
+    build: .
+    container_name: php7-apache
     volumes:
-      - ./src/:/var/www/html/
+      - ./src/:/var/www/html:z
     ports:
       - 8081:80
     networks:
